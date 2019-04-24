@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Angel_Promotion::free" sortOrder="10" title="free">
+					<resource id="Angel_Promotion::free_save" sortOrder="10" title="Save free"/>
+					<resource id="Angel_Promotion::free_delete" sortOrder="20" title="Delete free"/>
+					<resource id="Angel_Promotion::free_update" sortOrder="30" title="Update free"/>
+					<resource id="Angel_Promotion::free_view" sortOrder="40" title="View free"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

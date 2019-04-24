@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Angel::promotion" module="Angel_Promotion" parent="Angel::top_level" resource="Angel_Promotion::promotion" sortOrder="90" title="Raffle Promotion"/>
+		<add action="angel_promotion/free/index" id="Angel_Promotion::free" module="Angel_Promotion" parent="Angel::top_level" resource="Angel_Promotion::free" sortOrder="10" title="Buy X get Y"/>
+	</menu>
+</config>

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Angel\Promotion\Api\FreeRepositoryInterface" type="Angel\Promotion\Model\FreeRepository"/>
+	<preference for="Angel\Promotion\Api\Data\FreeInterface" type="Angel\Promotion\Model\Data\Free"/>
+	<preference for="Angel\Promotion\Api\Data\FreeSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Angel\Promotion\Model\ResourceModel\Free\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">angel_promotion_free</argument>
+			<argument name="resourceModel" xsi:type="string">Angel\Promotion\Model\ResourceModel\Free\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="angel_promotion_free_listing_data_source" xsi:type="string">Angel\Promotion\Model\ResourceModel\Free\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>
