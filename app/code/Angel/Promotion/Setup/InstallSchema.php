@@ -36,6 +36,14 @@ class InstallSchema implements InstallSchemaInterface
         );
 
         $table_angel_promotion_free->addColumn(
+            'product_id',
+            \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+            null,
+            ['nullable' => False,'unsigned' => true],
+            'Product Id'
+        );
+
+        $table_angel_promotion_free->addColumn(
             'free',
             \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
             null,
@@ -65,6 +73,14 @@ class InstallSchema implements InstallSchemaInterface
             null,
             [],
             'Status'
+        );
+
+        $table_angel_promotion_free->addForeignKey(
+            $setup->getFkName('angel_promotion_free', 'product_id', 'catalog_product_entity', 'entity_id'),
+            'product_id',
+            $setup->getTable('catalog_product_entity'),
+            'entity_id',
+            \Magento\Framework\DB\Ddl\Table::ACTION_CASCADE
         );
 
         //Your install script

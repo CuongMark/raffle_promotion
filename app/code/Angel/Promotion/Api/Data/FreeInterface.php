@@ -7,6 +7,7 @@ interface FreeInterface extends \Magento\Framework\Api\ExtensibleDataInterface
 {
 
     const STATUS = 'status';
+    const PRODUCT_ID = 'product_id';
     const TOTAL_TIME = 'total_time';
     const SORT_ORDER = 'sort_order';
     const BUY = 'buy';
@@ -105,4 +106,17 @@ interface FreeInterface extends \Magento\Framework\Api\ExtensibleDataInterface
      * @return \Angel\Promotion\Api\Data\FreeInterface
      */
     public function setStatus($status);
+
+    /**
+     * Get product_id
+     * @return string|null
+     */
+    public function getProductId();
+
+    /**
+     * Set product_id
+     * @param string $productId
+     * @return \Angel\Promotion\Api\Data\FreeInterface
+     */
+    public function setProductId($productId);
 }

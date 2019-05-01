@@ -1,0 +1,8 @@
+<?php /** @var \Angel\Promotion\Block\Product $block */ ?>
+<?php if ($block->getRafflePromotion()->getSize()): ?>
+    <h2><?= __('Promotions:') ?></h2>
+    <?php /** @var \Angel\Promotion\Model\Data\Free $free */ ?>
+    <?php foreach ($block->getRafflePromotion() as $free): ?>
+        <p><?= __('Buy <strong>%1</strong> get <strong>%2</strong> free.', $free->getBuy(), $free->getFree()) ?></p>
+    <?php endforeach;?>
+<?php endif; ?>

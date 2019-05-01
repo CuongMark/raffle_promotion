@@ -134,5 +134,17 @@
 				</editor>
 			</settings>
 		</column>
+		<column name="product_id">
+			<settings>
+				<filter>text</filter>
+				<label translate="true">product_id</label>
+				<editor>
+					<editorType>text</editorType>
+					<validation>
+						<rule name="required-entry" xsi:type="boolean">false</rule>
+					</validation>
+				</editor>
+			</settings>
+		</column>
 	</columns>
 </listing>

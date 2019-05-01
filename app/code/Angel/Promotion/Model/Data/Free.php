@@ -141,4 +141,23 @@ class Free extends \Magento\Framework\Api\AbstractExtensibleObject implements Fr
     {
         return $this->setData(self::STATUS, $status);
     }
+
+    /**
+     * Get product_id
+     * @return string|null
+     */
+    public function getProductId()
+    {
+        return $this->_get(self::PRODUCT_ID);
+    }
+
+    /**
+     * Set product_id
+     * @param string $productId
+     * @return \Angel\Promotion\Api\Data\FreeInterface
+     */
+    public function setProductId($productId)
+    {
+        return $this->setData(self::PRODUCT_ID, $productId);
+    }
 }

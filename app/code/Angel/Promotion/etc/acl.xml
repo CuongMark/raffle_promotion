@@ -3,11 +3,10 @@
 	<acl>
 		<resources>
 			<resource id="Magento_Backend::admin">
-				<resource id="Angel_Promotion::free" sortOrder="10" title="free">
-					<resource id="Angel_Promotion::free_save" sortOrder="10" title="Save free"/>
-					<resource id="Angel_Promotion::free_delete" sortOrder="20" title="Delete free"/>
-					<resource id="Angel_Promotion::free_update" sortOrder="30" title="Update free"/>
-					<resource id="Angel_Promotion::free_view" sortOrder="40" title="View free"/>
+				<resource id="Angel_Core::angel">
+					<resource id="Angel_Promotion::promotion" sortOrder="10" title="Promotion">
+						<resource id="Angel_Promotion::free" sortOrder="10" title="Buy X Get Y"/>
+					</resource>
 				</resource>
 			</resource>
 		</resources>
